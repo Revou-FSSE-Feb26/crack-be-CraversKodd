@@ -6,7 +6,7 @@ const {
   createWorkspace,
   updateWorkspace,
   deleteWorkspace,
-} = require('../controllers/workspaceController');
+} = require('../controllers/workspaceController.js');
 const { verifyToken, isAdmin } = require('../middlewares/authMiddleware');
 
 const router = express.Router();

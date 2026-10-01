@@ -5,7 +5,7 @@ require('dotenv').config();
 // Import Routes
 const authRoutes = require('./routes/authRoutes');
 const workspaceRoutes = require('./routes/workspaceRoutes');
-
+const bookingRoutes = require('./routes/bookingRoutes');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -16,6 +16,8 @@ app.use(express.json());
 // Gunakan Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/workspaces', workspaceRoutes);
+app.use('/api/bookings', bookingRoutes);
+
 // Root Route
 app.get('/', (req, res) => {
   res.json({ message: 'SpaceSync API is running smoothly!' });
